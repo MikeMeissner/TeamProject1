@@ -39,7 +39,7 @@
                         <li id="home" runat="server"><a href="Default.aspx">Home</a></li>
                         <li id="products" runat="server"><a href="Calendar.aspx">Calendar</a></li>
                         <li id="services" runat="server"><a href="Login.aspx">Login</a></li>
-                   >
+                   
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
