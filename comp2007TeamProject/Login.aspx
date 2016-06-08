@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
         <!--Authors: Nathan Siu and Mike Meissner
     Website Name: Game Tracker
-    Page Description: This is the login page
+    Page Description: This is the login page or have the option to register if you are not already registered
     File Name: Login.aspx
 --> 
 </asp:Content>

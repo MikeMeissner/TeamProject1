@@ -3,7 +3,7 @@
 <!DOCTYPE html>
     <!--Authors: Nathan Siu and Mike Meissner
     Website Name: Game Tracker
-    Page Description: This is the master page
+    Page Description: This is the master page and all pages inherit from this page
     File Name: Site.Master
 --> 
 <html lang="en">

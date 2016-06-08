@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
         <!--Authors: Nathan Siu and Mike Meissner
     Website Name: Game Tracker
-    Page Description: This is the calendar page
+    Page Description: This is the calendar page it displays weekly results of games
     File Name: Calendar.aspx
 --> 
 </asp:Content>
