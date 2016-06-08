@@ -1,7 +1,11 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="comp2007TeamProject.Site" %>
 
 <!DOCTYPE html>
-
+    <!--Authors: Nathan Siu and Mike Meissner
+    Website Name: Game Tracker
+    Page Description: This is the master page
+    File Name: Site.Master
+--> 
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
