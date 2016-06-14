@@ -26,7 +26,6 @@ namespace comp2007TeamProject.Models
         }
     
         public virtual DbSet<Cours> Courses { get; set; }
-        public virtual DbSet<csgo> csgoes { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Enrollment> Enrollments { get; set; }
         public virtual DbSet<Student> Students { get; set; }
