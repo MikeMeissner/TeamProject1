@@ -22,7 +22,7 @@ namespace comp2007TeamProject.Models
         public int totalPoints { get; set; }
         public string mapPlayed { get; set; }
         public string winner { get; set; }
-        public Nullable<int> roundsWonTeam2 { get; set; }
-        public Nullable<int> totalPointsTeam2 { get; set; }
+        public int roundsWonTeam2 { get; set; }
+        public int totalPointsTeam2 { get; set; }
     }
 }
