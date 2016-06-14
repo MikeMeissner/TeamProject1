@@ -140,7 +140,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\" />
     <Folder Include="User Controls\" />
   </ItemGroup>
   <PropertyGroup>
