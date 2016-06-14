@@ -90,6 +90,7 @@
     <Content Include="Scripts\jquery-2.2.3.min.map" />
     <Content Include="Calendar.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="CsgoDetails.aspx" />
     <EntityDeploy Include="Models\GameTrackerModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>GameTrackerModel.Designer.cs</LastGenOutput>
@@ -191,6 +192,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CsgoDetails.aspx.cs">
+      <DependentUpon>CsgoDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CsgoDetails.aspx.designer.cs">
+      <DependentUpon>CsgoDetails.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
