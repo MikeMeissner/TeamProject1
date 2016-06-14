@@ -147,6 +147,9 @@
     <Compile Include="Models\Cours.cs">
       <DependentUpon>GameTrackerModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\csgo.cs">
+      <DependentUpon>GameTrackerModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Department.cs">
       <DependentUpon>GameTrackerModel.tt</DependentUpon>
     </Compile>
