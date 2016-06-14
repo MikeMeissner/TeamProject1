@@ -26,8 +26,8 @@
           <Property Name="totalPoints" Type="int" Nullable="false" />
           <Property Name="mapPlayed" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="winner" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="roundsWonTeam2" Type="int" Nullable="false" />
-          <Property Name="totalPointsTeam2" Type="int" Nullable="false" />
+          <Property Name="roundsWonTeam2" Type="int" />
+          <Property Name="totalPointsTeam2" Type="int" />
         </EntityType>
         <EntityType Name="Departments">
           <Key>
@@ -176,8 +176,8 @@
           <Property Name="totalPoints" Type="Int32" Nullable="false" />
           <Property Name="mapPlayed" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="winner" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="roundsWonTeam2" Type="Int32" Nullable="false" />
-          <Property Name="totalPointsTeam2" Type="Int32" Nullable="false" />
+          <Property Name="roundsWonTeam2" Type="Int32" />
+          <Property Name="totalPointsTeam2" Type="Int32" />
         </EntityType>
         <EntityType Name="Department">
           <Key>
