@@ -40,7 +40,7 @@ namespace comp2007TeamProject
 
                 db.SaveChanges();
 
-                Response.Redirect("~/Default.aspx");
+                Response.Redirect("~/Csgo.aspx");
             }
         }
     }
