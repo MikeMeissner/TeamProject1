@@ -8,9 +8,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-  <h1>Choose a game</h1>
-    
-  <div class="row">
+  
+    <div class="container" id="featuredGames">
+        
+         <div class="row">
+             <h1>Featured Games</h1>
+
 
       <div class="col-xs-6 col-md-3">
         <a href="Csgo.aspx" class="thumbnail">
@@ -37,6 +40,9 @@
       </div>
 
    </div>
+    </div>
+    
+ 
     
     
     
