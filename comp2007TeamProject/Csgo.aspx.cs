@@ -14,7 +14,12 @@ namespace comp2007TeamProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.GetCsgoData();
+            if(!IsPostBack)
+            {
+                //get csgo data
+                this.GetCsgoData();
+            }
+           
         }
         protected void GetCsgoData()
         {
@@ -26,6 +31,7 @@ namespace comp2007TeamProject
                             select allData);
 
                 //bind results to the gridview
+                CsgoGridView.DataSource = Csgo.ToList();
                 CsgoGridView.DataBind();
             }
         }
