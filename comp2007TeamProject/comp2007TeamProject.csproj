@@ -76,6 +76,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\workingImages\gamebox_csgo.jpg" />
+    <Content Include="Assets\workingImages\gamebox_dota2.jpg" />
+    <Content Include="Assets\workingImages\gamebox_lol.jpg" />
+    <Content Include="Assets\workingImages\gamebox_smite.jpg" />
     <Content Include="Content\Custom.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
@@ -207,7 +211,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\" />
     <Folder Include="User Controls\" />
   </ItemGroup>
   <ItemGroup>
