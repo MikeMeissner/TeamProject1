@@ -14,6 +14,7 @@ namespace comp2007TeamProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if the page is loading for the first time, populate the grid
             if(!IsPostBack)
             {
                 //get csgo data
@@ -21,6 +22,14 @@ namespace comp2007TeamProject
             }
            
         }
+        /**
+         * 
+         * <summary>
+         * This method gets the csgo data from the DB
+         * </summary>
+         * @method GetCsgoData
+         * @returns {void}
+         * */
         protected void GetCsgoData()
         {
             //connect to EF

@@ -15,6 +15,13 @@ namespace comp2007TeamProject
         {
 
         }
+        /**
+         * <summary>
+         *  This method takes all the inputs on the csgo details page and inserts it to the fields in the table
+         * </summary>
+         * @method SaveButton_Click
+         * @returns {void}
+         * */
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
@@ -38,8 +45,10 @@ namespace comp2007TeamProject
                 //use LINQ to ADO.NET to insert record to DB
                 db.Csgoes.Add(csgoGameDetails);
 
+                //save all changes in the DB
                 db.SaveChanges();
 
+                //redirect to csgo stats page
                 Response.Redirect("~/Csgo.aspx");
             }
         }
