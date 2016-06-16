@@ -13,8 +13,41 @@ namespace comp2007TeamProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if((!IsPostBack) && (Request.QueryString.Count >0))
+            {
+                this.getGameDetails();
+            }
         }
+
+        protected void getGameDetails()
+        {
+            // populate the form with existing data from the data base
+            int gameID = Convert.ToInt32(Request.QueryString["gameID"]);
+
+            //connect to db
+            using (DefaultConnection db = new DefaultConnection())
+            {
+                Csgo updatedDetails = (from gameRecords in db.Csgoes where gameRecords.gameID == gameID select gameRecords).FirstOrDefault();
+
+                //map the game properties to the form
+
+            if(updatedDetails != null)
+                {
+                    Team1TextBox.Text = updatedDetails.team1;
+                    Team2TextBox.Text = updatedDetails.team2;
+                    RoundsForTeam1TextBox.Text = updatedDetails.roundsWon.ToString();
+                    RoundsForTeam2TextBox.Text = updatedDetails.roundsWonTeam2.ToString();
+                    PointsForTeam1TextBox.Text = updatedDetails.totalPoints.ToString();
+                    PointsForTeam2TextBox.Text = updatedDetails.totalPointsTeam2.ToString();
+                    MapPlayedTexBox.Text = updatedDetails.mapPlayed;
+                    SpectatorsTextBox.Text = updatedDetails.spectators.ToString();
+                    WinnerTextBox.Text = updatedDetails.winner;
+                    //WeekTextBox.Text = updatedDetails.weekOfGame.ToString();
+
+                }
+            }
+        }
+
         /**
          * <summary>
          *  This method takes all the inputs on the csgo details page and inserts it to the fields in the table
@@ -31,6 +64,18 @@ namespace comp2007TeamProject
                 Csgo csgoGameDetails = new Csgo();
 
 
+                int gameID = 0;
+
+                if(Request.QueryString.Count>0)// our url has a gameID in it
+                {
+                    gameID = Convert.ToInt32(Request.QueryString["gameID"]);
+
+                    //get the current game from EF DB
+                    csgoGameDetails = (from csgo in db.Csgoes where csgo.gameID == gameID select csgo).FirstOrDefault();
+
+                
+                }
+
                 //add form data to the new game record
                 csgoGameDetails.team1 = Team1TextBox.Text;
                 csgoGameDetails.team2 = Team2TextBox.Text;
@@ -41,9 +86,15 @@ namespace comp2007TeamProject
                 csgoGameDetails.mapPlayed = MapPlayedTexBox.Text;
                 csgoGameDetails.spectators = int.Parse(SpectatorsTextBox.Text);
                 csgoGameDetails.winner = WinnerTextBox.Text;
+                //csgoGameDetails.weekOfGame = int.Parse(WeekTextBox.Text);
+                //csgoGameDetails.weekOfGame = DateTime.Parse(weekNumber.Text);
 
                 //use LINQ to ADO.NET to insert record to DB
-                db.Csgoes.Add(csgoGameDetails);
+                if(gameID == 0)
+                {
+                    db.Csgoes.Add(csgoGameDetails);
+                }
+               
 
                 //save all changes in the DB
                 db.SaveChanges();
@@ -51,6 +102,11 @@ namespace comp2007TeamProject
                 //redirect to csgo stats page
                 Response.Redirect("~/Csgo.aspx");
             }
+        }
+
+        protected void CancelButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Csgo.aspx");
         }
     }
 }

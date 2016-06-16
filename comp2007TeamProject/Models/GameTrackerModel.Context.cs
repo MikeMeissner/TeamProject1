@@ -25,7 +25,11 @@ namespace comp2007TeamProject.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Cours> Courses { get; set; }
         public virtual DbSet<Csgo> Csgoes { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<Enrollment> Enrollments { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Table> Tables { get; set; }
     }
 }

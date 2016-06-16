@@ -12,18 +12,8 @@ namespace comp2007TeamProject.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Csgo
+    public partial class Table
     {
-        public int gameID { get; set; }
-        public string team1 { get; set; }
-        public string team2 { get; set; }
-        public int roundsWon { get; set; }
-        public int spectators { get; set; }
-        public int totalPoints { get; set; }
-        public string mapPlayed { get; set; }
-        public string winner { get; set; }
-        public int roundsWonTeam2 { get; set; }
-        public int totalPointsTeam2 { get; set; }
-        public Nullable<int> weekOfGame { get; set; }
+        public int Id { get; set; }
     }
 }

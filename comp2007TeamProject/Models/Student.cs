@@ -12,22 +12,20 @@ namespace comp2007TeamProject.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Department
+    public partial class Student
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Department()
+        public Student()
         {
-            this.Courses = new HashSet<Cours>();
-            this.Courses1 = new HashSet<Cours>();
+            this.Enrollments = new HashSet<Enrollment>();
         }
     
-        public int DepartmentID { get; set; }
-        public string Name { get; set; }
-        public decimal Budget { get; set; }
+        public int StudentID { get; set; }
+        public string LastName { get; set; }
+        public string FirstMidName { get; set; }
+        public System.DateTime EnrollmentDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cours> Courses { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cours> Courses1 { get; set; }
+        public virtual ICollection<Enrollment> Enrollments { get; set; }
     }
 }

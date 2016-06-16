@@ -44,5 +44,24 @@ namespace comp2007TeamProject
                 CsgoGridView.DataBind();
             }
         }
+
+        protected void CsgoGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int selectedRow = e.RowIndex; // store which row was called
+            int gameID = Convert.ToInt32(CsgoGridView.DataKeys[selectedRow].Values["gameID"]);// get game ID
+
+            //connect to db to remove row
+
+            using (DefaultConnection db = new DefaultConnection())
+            {
+                Csgo removedGame = (from gameRecords in db.Csgoes where gameRecords.gameID == gameID select gameRecords).FirstOrDefault();
+
+                db.Csgoes.Remove(removedGame);
+
+                db.SaveChanges();
+
+                this.GetCsgoData();
+            }
+        }
     }
 }

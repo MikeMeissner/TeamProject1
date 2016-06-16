@@ -45,9 +45,18 @@
                 <label class="control-label">Winner:</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="WinnerTextBox" placeholder="Winner" required="true"></asp:TextBox>
             </div>
+              <%--<div class="form-group">
+                <label class="control-label">Week:</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="WeekTextBox" placeholder="Winner" required="true"></asp:TextBox>
+            </div>--%>
+            <%--  <div class="form-group">
+                <label class="control-label">Week:</label>
+             <asp:TextBox type="week" runat="server" CssClass="form-control" ID="weekNumber" required="true"></asp:TextBox>
+            </div>--%>
+            
             <div>
                 <asp:Button Text="Cancel" ID="CancelButton" CssClass="btn btn-warning btn-lg" runat="server" 
-                        UseSubmitBehavior="false" CausesValidation="false"/>
+                        UseSubmitBehavior="false" CausesValidation="false" OnClick="CancelButton_Click"/>
                 <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click"/>
             </div>
         </div>
