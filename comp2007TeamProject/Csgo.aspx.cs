@@ -33,7 +33,7 @@ namespace comp2007TeamProject
         protected void GetCsgoData()
         {
             //connect to EF
-            using (DefaultConnection db = new DefaultConnection())
+            using (GameTrackerConnection db = new GameTrackerConnection())
             {
                 //query the csgo table
                 var Csgo = (from allData in db.Csgoes
@@ -52,7 +52,7 @@ namespace comp2007TeamProject
 
             //connect to db to remove row
 
-            using (DefaultConnection db = new DefaultConnection())
+            using (GameTrackerConnection db = new GameTrackerConnection())
             {
                 Csgo removedGame = (from gameRecords in db.Csgoes where gameRecords.gameID == gameID select gameRecords).FirstOrDefault();
 

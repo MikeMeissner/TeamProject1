@@ -25,7 +25,7 @@ namespace comp2007TeamProject
             int gameID = Convert.ToInt32(Request.QueryString["gameID"]);
 
             //connect to db
-            using (DefaultConnection db = new DefaultConnection())
+            using (GameTrackerConnection db = new GameTrackerConnection())
             {
                 Csgo updatedDetails = (from gameRecords in db.Csgoes where gameRecords.gameID == gameID select gameRecords).FirstOrDefault();
 
@@ -58,7 +58,7 @@ namespace comp2007TeamProject
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
-            using (DefaultConnection db = new DefaultConnection())
+            using (GameTrackerConnection db = new GameTrackerConnection())
             {
                 //creating new csgo object based on the model
                 Csgo csgoGameDetails = new Csgo();
