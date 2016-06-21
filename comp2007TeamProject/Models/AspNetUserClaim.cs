@@ -12,15 +12,13 @@ namespace comp2007TeamProject.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Enrollment
+    public partial class AspNetUserClaim
     {
-        public int EnrollmentID { get; set; }
-        public int CourseID { get; set; }
-        public int StudentID { get; set; }
-        public int Grade { get; set; }
+        public int Id { get; set; }
+        public string UserId { get; set; }
+        public string ClaimType { get; set; }
+        public string ClaimValue { get; set; }
     
-        public virtual Cours Cours { get; set; }
-        public virtual Cours Cours1 { get; set; }
-        public virtual Student Student { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

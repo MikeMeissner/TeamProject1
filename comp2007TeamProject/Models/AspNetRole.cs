@@ -12,25 +12,18 @@ namespace comp2007TeamProject.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Cours
+    public partial class AspNetRole
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cours()
+        public AspNetRole()
         {
-            this.Enrollments = new HashSet<Enrollment>();
-            this.Enrollments1 = new HashSet<Enrollment>();
+            this.AspNetUsers = new HashSet<AspNetUser>();
         }
     
-        public int CourseID { get; set; }
-        public string Title { get; set; }
-        public int Credits { get; set; }
-        public int DepartmentID { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
     
-        public virtual Department Department { get; set; }
-        public virtual Department Department1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Enrollment> Enrollments { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Enrollment> Enrollments1 { get; set; }
+        public virtual ICollection<AspNetUser> AspNetUsers { get; set; }
     }
 }

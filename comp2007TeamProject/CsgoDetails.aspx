@@ -49,10 +49,10 @@
                 <label class="control-label">Week:</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="WeekTextBox" placeholder="Winner" required="true"></asp:TextBox>
             </div>--%>
-            <%--  <div class="form-group">
+              <div class="form-group">
                 <label class="control-label">Week:</label>
              <asp:TextBox type="week" runat="server" CssClass="form-control" ID="weekNumber" required="true"></asp:TextBox>
-            </div>--%>
+            </div>
             
             <div>
                 <asp:Button Text="Cancel" ID="CancelButton" CssClass="btn btn-warning btn-lg" runat="server" 

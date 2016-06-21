@@ -75,6 +75,12 @@ namespace comp2007TeamProject
 
                 
                 }
+                string week = weekNumber.Text;
+                string[] weekArray = null;
+                char[] splitChar = { 'W' };
+                weekArray = week.Split(splitChar);
+                string weekNum = weekArray[1];
+                
 
                 //add form data to the new game record
                 csgoGameDetails.team1 = Team1TextBox.Text;
@@ -87,10 +93,10 @@ namespace comp2007TeamProject
                 csgoGameDetails.spectators = int.Parse(SpectatorsTextBox.Text);
                 csgoGameDetails.winner = WinnerTextBox.Text;
                 //csgoGameDetails.weekOfGame = int.Parse(WeekTextBox.Text);
-                //csgoGameDetails.weekOfGame = DateTime.Parse(weekNumber.Text);
+                csgoGameDetails.weekOfGame = int.Parse(weekNum);
 
                 //use LINQ to ADO.NET to insert record to DB
-                if(gameID == 0)
+                if (gameID == 0)
                 {
                     db.Csgoes.Add(csgoGameDetails);
                 }

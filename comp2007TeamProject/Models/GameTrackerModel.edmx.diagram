@@ -4,18 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="cd424ccc017944d38e72768e6b0d0709" Name="Diagram1">
-        <EntityTypeShape EntityType="GameTrackerModel.Cours" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameTrackerModel.Csgo" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameTrackerModel.Department" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameTrackerModel.Enrollment" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameTrackerModel.Student" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameTrackerModel.Table" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="GameTrackerModel.FK_Courses_DepartmentID" ManuallyRouted="false" />
-        <AssociationConnector Association="GameTrackerModel.FK_Courses_Departments_Cascade" ManuallyRouted="false" />
-        <AssociationConnector Association="GameTrackerModel.FK_Enrollments_CourseID" ManuallyRouted="false" />
-        <AssociationConnector Association="GameTrackerModel.FK_Enrollments_Courses_Cascade" ManuallyRouted="false" />
-        <AssociationConnector Association="GameTrackerModel.FK_Enrollments_StudentID" ManuallyRouted="false" />
+      <Diagram DiagramId="09bf882f2f9849efb93e4f98d39be061" Name="Diagram1">
+        <EntityTypeShape EntityType="GameTrackerModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameTrackerModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameTrackerModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameTrackerModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameTrackerModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameTrackerModel.Csgo" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="GameTrackerModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="GameTrackerModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="GameTrackerModel.AspNetUserRoles" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

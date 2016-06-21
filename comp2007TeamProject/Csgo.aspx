@@ -23,7 +23,7 @@
                         <asp:BoundField DataField="winner" HeaderText="Winner" Visible="true" SortExpression="winner" />
                         <asp:BoundField DataField="spectators" HeaderText="Spectators" Visible="true" SortExpression="spectators" />
                         <%-- <asp:BoundField DataField="weekOfGame" HeaderText="Week" Visible="true" SortExpression="weekOfGame" />--%>
-                          <%-- <asp:BoundField DataField="weekOfGame" HeaderText="Week" Visible="true" SortExpression="week" />--%>
+                           <asp:BoundField DataField="weekOfGame" HeaderText="Week" Visible="true" SortExpression="week" />
                     
                           <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" 
                             NavigateUrl="~/CsgoDetails.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm" runat="server"

@@ -94,6 +94,15 @@ namespace comp2007TeamProject {
         protected global::System.Web.UI.WebControls.TextBox WinnerTextBox;
         
         /// <summary>
+        /// weekNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox weekNumber;
+        
+        /// <summary>
         /// CancelButton control.
         /// </summary>
         /// <remarks>
