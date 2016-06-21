@@ -39,7 +39,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li id="home" runat="server"><a href="Default.aspx">Home</a></li>
                         <li id="products" runat="server"><a href="Calendar.aspx">Calendar</a></li>
+                          <li id="register" runat="server"><a href="Register.aspx">Register</a></li>
                         <li id="services" runat="server"><a href="Login.aspx">Login</a></li>
+                          <li id="logout" runat="server"><a href="Logout.aspx">Logout</a></li>
+                       
                    
                     </ul>
                 </div>

@@ -11,39 +11,58 @@ using Microsoft.Owin.Security;
 
 namespace comp2007TeamProject
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class WebForm5 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void LoginButton_Click(object sender, EventArgs e)
+        protected void CancelButton_Click(object sender, EventArgs e)
+        {
+            //redirect to homepage
+            Response.Redirect("~/Default.aspx");
+
+        }
+
+        protected void RegisterButton_Click(object sender, EventArgs e)
         {
             //create new userStore and userManager Objects
             var userStore = new UserStore<IdentityUser>();
             var userManager = new UserManager<IdentityUser>(userStore);
 
-            //search for and create a new user object
-            var user = userManager.Find(UserNameTextBox.Text, PasswordTextBox.Text);
-            //if match is found for user
-            if(user !=null)
+            //create new user object
+            var user = new IdentityUser()
             {
-                //authenticate and sign in the user
+                UserName = UserNameTextBox.Text,
+                PhoneNumber = PhoneNumberTextBox.Text,
+                Email = EmailTextBox.Text
+
+            };
+            //create new user object in the db and store the result 
+            IdentityResult result = userManager.Create(user,PasswordTextBox.Text);
+
+            //check registered
+            if(result.Succeeded)
+
+            {
+                //authenticate and login our new user
                 var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                 var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
                 //sign in
-                authenticationManager.SignIn(new AuthenticationProperties() {IsPersistent= false }, userIdentity);
+                authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
 
                 //redirect to featured games
                 Response.Redirect("~/Calendar.aspx");
             }
+
             else
             {
-                //throw an error to the alertflsah div
-                StatusLabel.Text = "Invalid username or password";
+                //display error in teh AlertFlash Div
+                StatusLabel.Text = result.Errors.FirstOrDefault();
                 AlertFlash.Visible = true;
+
             }
         }
     }
