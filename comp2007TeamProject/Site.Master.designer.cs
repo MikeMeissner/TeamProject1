@@ -49,6 +49,15 @@ namespace comp2007TeamProject {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl products;
         
         /// <summary>
+        /// PublicPlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PublicPlaceHolder;
+        
+        /// <summary>
         /// register control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace comp2007TeamProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl services;
+        
+        /// <summary>
+        /// LogoutPlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder LogoutPlaceHolder;
         
         /// <summary>
         /// logout control.

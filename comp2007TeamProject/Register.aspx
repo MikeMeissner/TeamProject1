@@ -1,6 +1,10 @@
 ﻿<%@ Page Title="register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="comp2007TeamProject.WebForm5" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="container">
 
         <div class="row">
