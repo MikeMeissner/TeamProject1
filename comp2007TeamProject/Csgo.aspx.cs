@@ -17,8 +17,11 @@ namespace comp2007TeamProject
             //if the page is loading for the first time, populate the grid
             if(!IsPostBack)
             {
-                //get csgo data
-                this.GetCsgoData();
+               
+                    //get csgo data
+                    this.GetCsgoData();
+                
+                
             }
            
         }
@@ -50,18 +53,27 @@ namespace comp2007TeamProject
             int selectedRow = e.RowIndex; // store which row was called
             int gameID = Convert.ToInt32(CsgoGridView.DataKeys[selectedRow].Values["gameID"]);// get game ID
 
-            //connect to db to remove row
-
-            using (GameTrackerConnection db = new GameTrackerConnection())
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                Csgo removedGame = (from gameRecords in db.Csgoes where gameRecords.gameID == gameID select gameRecords).FirstOrDefault();
+                //connect to db to remove row
 
-                db.Csgoes.Remove(removedGame);
+                using (GameTrackerConnection db = new GameTrackerConnection())
+                {
+                    Csgo removedGame = (from gameRecords in db.Csgoes where gameRecords.gameID == gameID select gameRecords).FirstOrDefault();
 
-                db.SaveChanges();
+                    db.Csgoes.Remove(removedGame);
 
-                this.GetCsgoData();
+                    db.SaveChanges();
+
+                    this.GetCsgoData();
+                }
             }
+            else
+            {
+                Response.Redirect("~/Login.aspx");
+            }
+
+            
         }
     }
 }
