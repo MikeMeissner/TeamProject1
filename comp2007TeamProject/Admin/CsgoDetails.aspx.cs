@@ -19,8 +19,11 @@ namespace comp2007TeamProject
             }
         }
 
+
         protected void getGameDetails()
         {
+
+
             // populate the form with existing data from the data base
             int gameID = Convert.ToInt32(Request.QueryString["gameID"]);
 

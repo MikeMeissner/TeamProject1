@@ -75,5 +75,34 @@ namespace comp2007TeamProject
 
             
         }
+
+
+        protected void csgoSort(object sender, EventArgs e)
+        {
+            if (weekNumberSort.Text == null)
+            {
+                Response.Redirect("~/Csgo.aspx");
+            } else { 
+            string week = weekNumberSort.Text;
+            string[] weekArray = null;
+            char[] splitChar = { 'W' };
+            weekArray = week.Split(splitChar);
+            string weekNum = weekArray[1];
+
+            int weekSort = int.Parse(weekNum);
+
+            //connect to EF
+            using (GameTrackerConnection db = new GameTrackerConnection())
+            {
+                //query the csgo table
+                var Csgo = (from allData in db.Csgoes where allData.weekOfGame == weekSort
+                            select allData);
+
+                //bind results to the gridview
+                CsgoGridView.DataSource = Csgo.ToList();
+                CsgoGridView.DataBind();
+            }
+        }
+        }
     }
 }

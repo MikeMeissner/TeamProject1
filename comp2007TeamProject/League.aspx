@@ -32,6 +32,10 @@
 
                     </Columns>
                 </asp:GridView>
+                 <label class="control-label">Sort Week:</label>
+                     <asp:TextBox type="week" runat="server" CssClass="form-control" ID="weekNumberSort" required="true"></asp:TextBox>
+                     <asp:Button Text="Sort" CssClass="btn btn-primary" runat="server" OnClick="leagueSort"/>
+                </div>
                  <a href="Admin/LeagueDetails.aspx" class="btn btn-success btn-md">Add Game Stats</a>
             </div>
         </div>
