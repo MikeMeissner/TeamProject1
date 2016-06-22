@@ -36,6 +36,19 @@
     background-position: center;
     color:white;
 }
+#guestContents{
+     background-image: url('../Assets/Images/background.png');
+     position: relative;
+    width:100%;
+    min-height:100vh;
+    background-size: cover;
+    background-position: center;
+    color:black;
+}
+#csgo{
+    background-image: url('../Assets/Images/large-white-background.jpg');
+    padding-bottom: 10px;
+}
 #text{
     color:black;
 }
