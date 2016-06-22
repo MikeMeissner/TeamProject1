@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-  
+  <body id="guestContent">
     <div class="container" id="featuredGames">
         
          <div class="row">
@@ -43,7 +43,7 @@
     </div>
     
  
-    
+    </body>
     
     
 

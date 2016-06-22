@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using comp2007TeamProject.Models;
+using System.Web.ModelBinding;
 
 namespace comp2007TeamProject
 {
@@ -11,7 +13,32 @@ namespace comp2007TeamProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                if (Request.QueryString.Count > 0)
+                {
+                    this.GetUser();
+                }
+            }
+        }
+     
+        protected void GetUser()
+        {
+            string UserID = Request.QueryString["Id"].ToString();
 
+            using (GameTrackerConnection db = new GameTrackerConnection())
+            {
+                AspNetUser updatedUser = (from user in db.AspNetUsers
+                                          where user.Id == UserID
+                                          select user).FirstOrDefault();
+
+               
+                
+                    UserNameTextBox.Text = updatedUser.UserName;
+                    PhoneNumberTextBox.Text = updatedUser.PhoneNumber;
+                    EmailTextBox.Text = updatedUser.Email;
+                
+            }
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)
@@ -21,7 +48,8 @@ namespace comp2007TeamProject
 
         protected void CancelButton_Click(object sender, EventArgs e)
         {
-
+            //redirect
+            Response.Redirect("~/Default.aspx");
         }
     }
 }
