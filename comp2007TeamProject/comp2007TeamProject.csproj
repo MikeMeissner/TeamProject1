@@ -144,7 +144,7 @@
     <Content Include="packages.config" />
     <Content Include="Calendar.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="CsgoDetails.aspx" />
+    <Content Include="Admin\CsgoDetails.aspx" />
     <Content Include="Csgo.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -156,11 +156,11 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="League.aspx" />
-    <Content Include="LeagueDetails.aspx" />
+    <Content Include="Admin\LeagueDetails.aspx" />
     <Content Include="Dota.aspx" />
-    <Content Include="DotaDetails.aspx" />
+    <Content Include="Admin\DotaDetails.aspx" />
     <Content Include="Smite.aspx" />
-    <Content Include="SmiteDetails.aspx" />
+    <Content Include="Admin\SmiteDetails.aspx" />
     <EntityDeploy Include="Models\GameTrackerModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>GameTrackerModel.Designer.cs</LastGenOutput>
@@ -273,11 +273,11 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CsgoDetails.aspx.cs">
+    <Compile Include="Admin\CsgoDetails.aspx.cs">
       <DependentUpon>CsgoDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CsgoDetails.aspx.designer.cs">
+    <Compile Include="Admin\CsgoDetails.aspx.designer.cs">
       <DependentUpon>CsgoDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Csgo.aspx.cs">
@@ -302,11 +302,11 @@
     <Compile Include="League.aspx.designer.cs">
       <DependentUpon>League.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LeagueDetails.aspx.cs">
+    <Compile Include="Admin\LeagueDetails.aspx.cs">
       <DependentUpon>LeagueDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LeagueDetails.aspx.designer.cs">
+    <Compile Include="Admin\LeagueDetails.aspx.designer.cs">
       <DependentUpon>LeagueDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dota.aspx.cs">
@@ -316,11 +316,11 @@
     <Compile Include="Dota.aspx.designer.cs">
       <DependentUpon>Dota.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DotaDetails.aspx.cs">
+    <Compile Include="Admin\DotaDetails.aspx.cs">
       <DependentUpon>DotaDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DotaDetails.aspx.designer.cs">
+    <Compile Include="Admin\DotaDetails.aspx.designer.cs">
       <DependentUpon>DotaDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Smite.aspx.cs">
@@ -330,11 +330,11 @@
     <Compile Include="Smite.aspx.designer.cs">
       <DependentUpon>Smite.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SmiteDetails.aspx.cs">
+    <Compile Include="Admin\SmiteDetails.aspx.cs">
       <DependentUpon>SmiteDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SmiteDetails.aspx.designer.cs">
+    <Compile Include="Admin\SmiteDetails.aspx.designer.cs">
       <DependentUpon>SmiteDetails.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -26,13 +26,13 @@
                            <asp:BoundField DataField="weekOfGame" HeaderText="Week" Visible="true" SortExpression="week" />
                     
                           <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" 
-                            NavigateUrl="~/CsgoDetails.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm" runat="server"
-                            DataNavigateUrlFields="gameID" DataNavigateUrlFormatString="CsgoDetails.aspx?gameID={0}" />
+                            NavigateUrl="~/Admin/CsgoDetails.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm" runat="server"
+                            DataNavigateUrlFields="gameID" DataNavigateUrlFormatString="Admin/CsgoDetails.aspx?gameID={0}" />
                          <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i>'Delete" ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
 
                     </Columns>
                 </asp:GridView>
-                 <a href="CsgoDetails.aspx" class="btn btn-success btn-md">Add Game Stats</a>
+                 <a href="Admin/CsgoDetails.aspx" class="btn btn-success btn-md">Add Game Stats</a>
             </div>
         </div>
     </div>
