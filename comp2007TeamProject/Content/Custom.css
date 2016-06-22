@@ -14,3 +14,18 @@
   background-color: #f5f5f5;
   border-color: #ddd;
 }
+#homecontent{
+
+    position: relative;
+    width:100%;
+    min-height:100vh;
+    text-align:center;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Assets/Images/background.png');
+    color:white;
+    
+}
+#text{
+    color:black;
+}
