@@ -1,9 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Csgo.aspx.cs" Inherits="comp2007TeamProject.WebForm4" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <body id="guestContent">
     <div class="container" id="csgo">
         <div class="row">
-            <div class="col-md-offset-2 col-md-8">
+            <div class="jumbotron">
+                   <div class="col-md-offset-2 col-md-8">
              
 
                 <h1>CSGO Weekly Stats</h1>
@@ -34,9 +36,11 @@
                 </asp:GridView>
                  <a href="Admin/CsgoDetails.aspx" class="btn btn-success btn-md">Add Game Stats</a>
             </div>
+            </div>
+         
         </div>
     </div>
-    
+    </body>
 
 
 </asp:Content>

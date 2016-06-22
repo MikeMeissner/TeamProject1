@@ -25,6 +25,16 @@
     background-image: url('../Assets/Images/background.png');
     color:white;
     
+    
+}
+#guestContent{
+     background-image: url('../Assets/Images/background.png');
+     position: relative;
+    width:100%;
+    min-height:100vh;
+    background-size: cover;
+    background-position: center;
+    color:white;
 }
 #text{
     color:black;

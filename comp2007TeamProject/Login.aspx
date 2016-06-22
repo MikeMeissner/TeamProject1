@@ -10,6 +10,7 @@
     <br />
     <br />
     <br />
+    <body id="guestContent">
      <div class="container">    
 
         <div class="row">
@@ -67,4 +68,5 @@
         </div>
 
     </div>
+        </body>
 </asp:Content>
