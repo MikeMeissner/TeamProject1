@@ -39,6 +39,36 @@ namespace comp2007TeamProject
             }
         }
 
+        protected void dotaSort(object sender, EventArgs e)
+        {
+            if (weekNumberSort.Text == null)
+            {
+                Response.Redirect("~/Dota.aspx");
+            }
+            else
+            {
+                string week = weekNumberSort.Text;
+                string[] weekArray = null;
+                char[] splitChar = { 'W' };
+                weekArray = week.Split(splitChar);
+                string weekNum = weekArray[1];
+
+                int weekSort = int.Parse(weekNum);
+
+                //connect to EF
+                using (GameTrackerConnection db = new GameTrackerConnection())
+                {
+                    //query the csgo table
+                    var Dota = (from allData in db.Dotas
+                                where allData.weekOfGame == weekSort
+                                select allData);
+
+                    //bind results to the gridview
+                    DotaGridView.DataSource = Dota.ToList();
+                    DotaGridView.DataBind();
+                }
+            }
+        }
         protected void DotaGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int selectedRow = e.RowIndex; // store which row was called

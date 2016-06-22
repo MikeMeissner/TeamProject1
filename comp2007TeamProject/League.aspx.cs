@@ -29,6 +29,38 @@ namespace comp2007TeamProject
 
         }
 
+
+        protected void leagueSort(object sender, EventArgs e)
+        {
+            if (weekNumberSort.Text == null)
+            {
+                Response.Redirect("~/League.aspx");
+            }
+            else
+            {
+                string week = weekNumberSort.Text;
+                string[] weekArray = null;
+                char[] splitChar = { 'W' };
+                weekArray = week.Split(splitChar);
+                string weekNum = weekArray[1];
+
+                int weekSort = int.Parse(weekNum);
+
+                //connect to EF
+                using (GameTrackerConnection db = new GameTrackerConnection())
+                {
+                    //query the csgo table
+                    var League = (from allData in db.Leagues
+                                where allData.weekOfGame == weekSort
+                                select allData);
+
+                    //bind results to the gridview
+                    LeagueGridView.DataSource = League.ToList();
+                    LeagueGridView.DataBind();
+                }
+            }
+        }
+
         protected void CancelButton_Click(object sender, EventArgs e)
         {
 
