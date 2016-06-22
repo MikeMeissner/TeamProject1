@@ -39,6 +39,37 @@ namespace comp2007TeamProject
             }
         }
 
+        protected void smiteSort(object sender, EventArgs e)
+        {
+            if (weekNumberSort.Text == null)
+            {
+                Response.Redirect("~/Smite.aspx");
+            }
+            else
+            {
+                string week = weekNumberSort.Text;
+                string[] weekArray = null;
+                char[] splitChar = { 'W' };
+                weekArray = week.Split(splitChar);
+                string weekNum = weekArray[1];
+
+                int weekSort = int.Parse(weekNum);
+
+                //connect to EF```
+                using (GameTrackerConnection db = new GameTrackerConnection())
+                {
+                    //query the csgo table
+                    var Smite = (from allData in db.Smites
+                                  where allData.weekOfGame == weekSort
+                                  select allData);
+
+                    //bind results to the gridview
+                    SmiteGridView.DataSource = Smite.ToList();
+                    SmiteGridView.DataBind();
+                }
+            }
+        }
+
         protected void SmiteGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int selectedRow = e.RowIndex; // store which row was called
