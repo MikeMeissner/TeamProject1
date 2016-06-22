@@ -161,6 +161,7 @@
     <Content Include="Admin\DotaDetails.aspx" />
     <Content Include="Smite.aspx" />
     <Content Include="Admin\SmiteDetails.aspx" />
+    <Content Include="UserProfile.aspx" />
     <EntityDeploy Include="Models\GameTrackerModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>GameTrackerModel.Designer.cs</LastGenOutput>
@@ -336,6 +337,13 @@
     </Compile>
     <Compile Include="Admin\SmiteDetails.aspx.designer.cs">
       <DependentUpon>SmiteDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
