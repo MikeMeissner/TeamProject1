@@ -22,19 +22,19 @@
       </div>
 
       <div class="col-xs-6 col-md-3">
-        <a href="#" class="thumbnail">
+        <a href="Dota.aspx" class="thumbnail">
           <img src="Assets/Images/gamebox_dota2.jpg" alt="Dota2"/>
         </a>
        </div>
 
       <div class="col-xs-6 col-md-3">
-        <a href="#" class="thumbnail">
+        <a href="League.aspx" class="thumbnail">
           <img src="Assets/Images/gamebox_lol.jpg" alt="League of Legends"/>
         </a>
       </div>
 
       <div class="col-xs-6 col-md-3">
-        <a href="#" class="thumbnail">
+        <a href="Smite.aspx" class="thumbnail">
           <img src="Assets/Images/gamebox_smite.jpg" alt="Smite"/>
         </a>
       </div>

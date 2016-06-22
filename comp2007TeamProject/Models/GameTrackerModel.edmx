@@ -82,6 +82,51 @@
           <Property Name="totalPointsTeam2" Type="int" Nullable="false" />
           <Property Name="weekOfGame" Type="int" />
         </EntityType>
+        <EntityType Name="Dota">
+          <Key>
+            <PropertyRef Name="gameID" />
+          </Key>
+          <Property Name="gameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="team1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="team2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="killsTeam1" Type="int" Nullable="false" />
+          <Property Name="killsTeam2" Type="int" Nullable="false" />
+          <Property Name="objectivesTeam1" Type="int" Nullable="false" />
+          <Property Name="objectivesTeam2" Type="int" Nullable="false" />
+          <Property Name="winner" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="spectators" Type="int" Nullable="false" />
+          <Property Name="weekOfGame" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="League">
+          <Key>
+            <PropertyRef Name="gameID" />
+          </Key>
+          <Property Name="gameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="team1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="team2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="killsTeam1" Type="int" Nullable="false" />
+          <Property Name="killsTeam2" Type="int" Nullable="false" />
+          <Property Name="objectivesTeam1" Type="int" Nullable="false" />
+          <Property Name="objectivesTeam2" Type="int" Nullable="false" />
+          <Property Name="winner" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="spectators" Type="int" Nullable="false" />
+          <Property Name="weekOfGame" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Smite">
+          <Key>
+            <PropertyRef Name="gameID" />
+          </Key>
+          <Property Name="gameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="team1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="team2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="killsTeam1" Type="int" Nullable="false" />
+          <Property Name="killsTeam2" Type="int" Nullable="false" />
+          <Property Name="pointsTeam1" Type="int" Nullable="false" />
+          <Property Name="pointsTeam2" Type="int" Nullable="false" />
+          <Property Name="winner" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="spectators" Type="int" Nullable="false" />
+          <Property Name="weekOfGame" Type="int" Nullable="false" />
+        </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
           <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -146,6 +191,9 @@
           <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Csgo" EntityType="Self.Csgo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dota" EntityType="Self.Dota" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="League" EntityType="Self.League" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Smite" EntityType="Self.Smite" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
@@ -243,6 +291,51 @@
           <Property Name="totalPointsTeam2" Type="Int32" Nullable="false" />
           <Property Name="weekOfGame" Type="Int32" />
         </EntityType>
+        <EntityType Name="Dota">
+          <Key>
+            <PropertyRef Name="gameID" />
+          </Key>
+          <Property Name="gameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="team1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="team2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="killsTeam1" Type="Int32" Nullable="false" />
+          <Property Name="killsTeam2" Type="Int32" Nullable="false" />
+          <Property Name="objectivesTeam1" Type="Int32" Nullable="false" />
+          <Property Name="objectivesTeam2" Type="Int32" Nullable="false" />
+          <Property Name="winner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="spectators" Type="Int32" Nullable="false" />
+          <Property Name="weekOfGame" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="League">
+          <Key>
+            <PropertyRef Name="gameID" />
+          </Key>
+          <Property Name="gameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="team1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="team2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="killsTeam1" Type="Int32" Nullable="false" />
+          <Property Name="killsTeam2" Type="Int32" Nullable="false" />
+          <Property Name="objectivesTeam1" Type="Int32" Nullable="false" />
+          <Property Name="objectivesTeam2" Type="Int32" Nullable="false" />
+          <Property Name="winner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="spectators" Type="Int32" Nullable="false" />
+          <Property Name="weekOfGame" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Smite">
+          <Key>
+            <PropertyRef Name="gameID" />
+          </Key>
+          <Property Name="gameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="team1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="team2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="killsTeam1" Type="Int32" Nullable="false" />
+          <Property Name="killsTeam2" Type="Int32" Nullable="false" />
+          <Property Name="pointsTeam1" Type="Int32" Nullable="false" />
+          <Property Name="pointsTeam2" Type="Int32" Nullable="false" />
+          <Property Name="winner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="spectators" Type="Int32" Nullable="false" />
+          <Property Name="weekOfGame" Type="Int32" Nullable="false" />
+        </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
           <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -282,6 +375,9 @@
           <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
           <EntitySet Name="Csgoes" EntityType="Self.Csgo" />
+          <EntitySet Name="Dotas" EntityType="Self.Dota" />
+          <EntitySet Name="Leagues" EntityType="Self.League" />
+          <EntitySet Name="Smites" EntityType="Self.Smite" />
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
@@ -369,6 +465,54 @@
                 <ScalarProperty Name="winner" ColumnName="winner" />
                 <ScalarProperty Name="roundsWonTeam2" ColumnName="roundsWonTeam2" />
                 <ScalarProperty Name="totalPointsTeam2" ColumnName="totalPointsTeam2" />
+                <ScalarProperty Name="weekOfGame" ColumnName="weekOfGame" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dotas">
+            <EntityTypeMapping TypeName="GameTrackerModel.Dota">
+              <MappingFragment StoreEntitySet="Dota">
+                <ScalarProperty Name="gameID" ColumnName="gameID" />
+                <ScalarProperty Name="team1" ColumnName="team1" />
+                <ScalarProperty Name="team2" ColumnName="team2" />
+                <ScalarProperty Name="killsTeam1" ColumnName="killsTeam1" />
+                <ScalarProperty Name="killsTeam2" ColumnName="killsTeam2" />
+                <ScalarProperty Name="objectivesTeam1" ColumnName="objectivesTeam1" />
+                <ScalarProperty Name="objectivesTeam2" ColumnName="objectivesTeam2" />
+                <ScalarProperty Name="winner" ColumnName="winner" />
+                <ScalarProperty Name="spectators" ColumnName="spectators" />
+                <ScalarProperty Name="weekOfGame" ColumnName="weekOfGame" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Leagues">
+            <EntityTypeMapping TypeName="GameTrackerModel.League">
+              <MappingFragment StoreEntitySet="League">
+                <ScalarProperty Name="gameID" ColumnName="gameID" />
+                <ScalarProperty Name="team1" ColumnName="team1" />
+                <ScalarProperty Name="team2" ColumnName="team2" />
+                <ScalarProperty Name="killsTeam1" ColumnName="killsTeam1" />
+                <ScalarProperty Name="killsTeam2" ColumnName="killsTeam2" />
+                <ScalarProperty Name="objectivesTeam1" ColumnName="objectivesTeam1" />
+                <ScalarProperty Name="objectivesTeam2" ColumnName="objectivesTeam2" />
+                <ScalarProperty Name="winner" ColumnName="winner" />
+                <ScalarProperty Name="spectators" ColumnName="spectators" />
+                <ScalarProperty Name="weekOfGame" ColumnName="weekOfGame" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Smites">
+            <EntityTypeMapping TypeName="GameTrackerModel.Smite">
+              <MappingFragment StoreEntitySet="Smite">
+                <ScalarProperty Name="gameID" ColumnName="gameID" />
+                <ScalarProperty Name="team1" ColumnName="team1" />
+                <ScalarProperty Name="team2" ColumnName="team2" />
+                <ScalarProperty Name="killsTeam1" ColumnName="killsTeam1" />
+                <ScalarProperty Name="killsTeam2" ColumnName="killsTeam2" />
+                <ScalarProperty Name="pointsTeam1" ColumnName="pointsTeam1" />
+                <ScalarProperty Name="pointsTeam2" ColumnName="pointsTeam2" />
+                <ScalarProperty Name="winner" ColumnName="winner" />
+                <ScalarProperty Name="spectators" ColumnName="spectators" />
                 <ScalarProperty Name="weekOfGame" ColumnName="weekOfGame" />
               </MappingFragment>
             </EntityTypeMapping>

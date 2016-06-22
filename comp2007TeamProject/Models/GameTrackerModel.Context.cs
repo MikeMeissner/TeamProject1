@@ -31,5 +31,8 @@ namespace comp2007TeamProject.Models
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<Csgo> Csgoes { get; set; }
+        public virtual DbSet<Dota> Dotas { get; set; }
+        public virtual DbSet<League> Leagues { get; set; }
+        public virtual DbSet<Smite> Smites { get; set; }
     }
 }
