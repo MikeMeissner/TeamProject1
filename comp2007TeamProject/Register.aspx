@@ -23,7 +23,7 @@
 
                 <br />
 
-                <div class="panel panel-primary">
+                <div class="panel panel-default" id="panel">
 
                     <div class="panel-heading">
 
