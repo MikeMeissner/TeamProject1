@@ -40,13 +40,13 @@ namespace comp2007TeamProject {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl home;
         
         /// <summary>
-        /// products control.
+        /// calendar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl products;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl calendar;
         
         /// <summary>
         /// PublicPlaceHolder control.
@@ -67,13 +67,13 @@ namespace comp2007TeamProject {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl register;
         
         /// <summary>
-        /// services control.
+        /// login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl services;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl login;
         
         /// <summary>
         /// LogoutPlaceHolder control.

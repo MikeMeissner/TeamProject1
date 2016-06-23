@@ -15,6 +15,7 @@ namespace comp2007TeamProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            SetActivePage();
             if(!IsPostBack)
             {
                 //check if a user is logged in
@@ -27,6 +28,30 @@ namespace comp2007TeamProject
                 {
                     LogoutPlaceHolder.Visible = false;
                 }
+            }
+        }
+
+        private void SetActivePage()
+        {
+            switch (Page.Title)
+            {
+                case "Home":
+                    home.Attributes.Add("class", "active");
+                    break;
+                case "Calendar":
+                    calendar.Attributes.Add("class", "active");
+                    break;
+                case "Login":
+                    login.Attributes.Add("class", "active");
+                    break;
+                case "Register":
+                    register.Attributes.Add("class", "active");
+                    break;
+                case "UserProfile":
+                    userProfile.Attributes.Add("class", "active");
+                    break;
+               
+
             }
         }
     }

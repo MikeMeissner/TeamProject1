@@ -38,10 +38,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li id="home" runat="server"><a href="/Default.aspx">Home</a></li>
-                        <li id="products" runat="server"><a href="/Calendar.aspx">Calendar</a></li>
+                        <li id="calendar" runat="server"><a href="/Calendar.aspx">Calendar</a></li>
                         <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
                                 <li id="register" runat="server"><a href="/Register.aspx">Register</a></li>
-                        <li id="services" runat="server"><a href="/Login.aspx">Login</a></li>
+                        <li id="login" runat="server"><a href="/Login.aspx">Login</a></li>
                         </asp:PlaceHolder>
                         <asp:PlaceHolder ID="LogoutPlaceHolder" runat="server">
                              <li id="userProfile" runat="server" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="UserProfile.aspx?D={0}" ><a href="/UserProfile.aspx">User Profile</a></li>
