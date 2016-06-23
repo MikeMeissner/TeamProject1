@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Smite.aspx.cs" Inherits="comp2007TeamProject.WebForm10" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <body id="guestContents">
     <div class="container" id="csgo">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -32,13 +33,15 @@
 
                     </Columns>
                 </asp:GridView>
+                <div class="formgroup">
                  <label class="control-label">Sort Week:</label>
                      <asp:TextBox type="week" runat="server" CssClass="form-control" ID="weekNumberSort" required="true"></asp:TextBox>
                      <asp:Button Text="Sort" CssClass="btn btn-primary" runat="server" OnClick="smiteSort"/>
                 </div>
-
+               
                  <a href="Admin/SmiteDetails.aspx" class="btn btn-success btn-md">Add Game Stats</a>
             </div>
         </div>
     </div>
+        </body>
 </asp:Content>
