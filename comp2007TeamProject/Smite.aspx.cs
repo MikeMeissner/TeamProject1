@@ -6,7 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using comp2007TeamProject.Models;
 using System.Web.ModelBinding;
-
+/**
+ * Authors: Nathan Siu and Mike Meissner
+ * File Description: Code behind file for the Smite gridview
+ * */
 namespace comp2007TeamProject
 {
     public partial class WebForm10 : System.Web.UI.Page
@@ -23,6 +26,14 @@ namespace comp2007TeamProject
             }
 
         }
+        /**
+            * 
+            * <summary>
+            * This method gets the dota data from the DB
+            * </summary>
+            * @method GetSmiteData
+            * @returns {void}
+            * */
 
         protected void GetSmiteData()
         {
@@ -38,6 +49,13 @@ namespace comp2007TeamProject
                 SmiteGridView.DataBind();
             }
         }
+        /**
+       * <summary>
+       * This method sorts out the games played by week
+       * </summary>
+       * @method smiteSort
+       * @returns {VOID}
+       * */
 
         protected void smiteSort(object sender, EventArgs e)
         {
@@ -47,15 +65,15 @@ namespace comp2007TeamProject
             }
             else
             {
-                string week = weekNumberSort.Text;
+                string week = weekNumberSort.Text;//store the input into a string
                 string[] weekArray = null;
-                char[] splitChar = { 'W' };
+                char[] splitChar = { 'W' };//split the input into 2 parts the year will be stored in weekArray[0] and the week number is stored in the second index of the array
                 weekArray = week.Split(splitChar);
-                string weekNum = weekArray[1];
+                string weekNum = weekArray[1];// store just the week number into a string variable
 
-                int weekSort = int.Parse(weekNum);
+                int weekSort = int.Parse(weekNum);// parse the number as an integer
 
-                //connect to EF```
+                //connect to EF
                 using (GameTrackerConnection db = new GameTrackerConnection())
                 {
                     //query the csgo table
@@ -70,12 +88,19 @@ namespace comp2007TeamProject
             }
         }
 
+        /**
+       * <summary>
+       * This method deletes record from the DB
+       * </summary>
+       * @method LeagueGridView_RowDeleting
+       * @returns {VOID}
+       * */
         protected void SmiteGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int selectedRow = e.RowIndex; // store which row was called
             int gameID = Convert.ToInt32(SmiteGridView.DataKeys[selectedRow].Values["gameID"]);// get game ID
 
-            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            if (HttpContext.Current.User.Identity.IsAuthenticated)//checks to see if user is logged in
             {
                 //connect to db to remove row
 
