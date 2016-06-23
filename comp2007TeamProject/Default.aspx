@@ -19,6 +19,23 @@
             </div>
                 
         </div>
+             <div class="row">
+                 <div class="col-md-6">
+                      <img src="Assets/Images/HE4CvOr_.jpg" alt="logo"/>
+                 </div>
+                 <div class="col-md-6">
+                     <div class="jumbotron" id="secondaryText">
+                         <h1>List Of Tracked Games</h1>
+                         <hr />
+
+                         <p>CSGO: A 5v5 competitive FPS</p>
+                         <p>League Of Legends: A 5v5 MOBA Game</p>
+                         <p>DOTA2: A 5v5 comptitive MOBA</p>
+                         <p>SMITE: A 5v5 comptitive objective based MOBA</p>
+
+                     </div>
+                 </div>
+             </div>
     </div>
     </body>
    
