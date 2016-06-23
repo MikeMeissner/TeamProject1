@@ -6,7 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using comp2007TeamProject.Models;
 using System.Web.ModelBinding;
-
+/**
+ * Authors: Nathan Siu and Mike Meissner
+ * File Description: Code behind file for the Smite details page
+ * */
 namespace comp2007TeamProject
 {
     public partial class WebForm11 : System.Web.UI.Page
@@ -47,11 +50,18 @@ namespace comp2007TeamProject
             }
         }
 
+        /**
+         * <summary>
+         *  This method takes all the inputs on the smite details page and inserts it to the fields in the table
+         * </summary>
+         * @method SaveButton_Click
+         * @returns {void}
+         * */
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             using (GameTrackerConnection db = new GameTrackerConnection())
             {
-                //creating new csgo object based on the model
+                //creating new smite object based on the model
                 Smite SmiteGameDetails = new Smite();
 
 
@@ -96,7 +106,7 @@ namespace comp2007TeamProject
                 //save all changes in the DB
                 db.SaveChanges();
 
-                //redirect to csgo stats page
+                //redirect to smite stats page
                 Response.Redirect("~/Smite.aspx");
             }
         }

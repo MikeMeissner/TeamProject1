@@ -6,7 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using comp2007TeamProject.Models;
 using System.Web.ModelBinding;
-
+/**
+ * Authors: Nathan Siu and Mike Meissner
+ * File Description: Code behind file for the Csgodetails page
+ * */
 namespace comp2007TeamProject
 {
     public partial class WebForm3 : System.Web.UI.Page

@@ -6,7 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using comp2007TeamProject.Models;
 using System.Web.ModelBinding;
-
+/**
+ * Authors: Nathan Siu and Mike Meissner
+ * File Description: Code behind file for the DOTA2 details page
+ * */
 
 namespace comp2007TeamProject
 {
@@ -48,6 +51,13 @@ namespace comp2007TeamProject
             }
         }
 
+        /**
+         * <summary>
+         *  This method takes all the inputs on the dota details page and inserts it to the fields in the table
+         * </summary>
+         * @method SaveButton_Click
+         * @returns {void}
+         * */
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             using (GameTrackerConnection db = new GameTrackerConnection())

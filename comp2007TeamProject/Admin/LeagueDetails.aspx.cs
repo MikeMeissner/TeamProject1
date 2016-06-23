@@ -7,7 +7,10 @@ using System.Web.UI.WebControls;
 using comp2007TeamProject.Models;
 using System.Web.ModelBinding;
 
-
+/**
+ * Authors: Nathan Siu and Mike Meissner
+ * File Description: Code behind file for the League details page
+ * */
 namespace comp2007TeamProject
 {
     public partial class WebForm7 : System.Web.UI.Page
@@ -48,11 +51,19 @@ namespace comp2007TeamProject
             }
         }
 
+
+        /**
+         * <summary>
+         *  This method takes all the inputs on the league details page and inserts it to the fields in the table
+         * </summary>
+         * @method SaveButton_Click
+         * @returns {void}
+         * */
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             using (GameTrackerConnection db = new GameTrackerConnection())
             {
-                //creating new csgo object based on the model
+                //creating new  league object based on the model
                 League leagueGameDetails = new League();
 
 
