@@ -64,4 +64,6 @@
     </div>
     </form>
 </body>
+
+<script src="Scripts/bootstrap.js"></script>
 </html>
