@@ -8,6 +8,10 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+/**
+ * Authors: Nathan Siu and Mike Meissner
+ * File Description: Code behind file the login
+ * */
 
 namespace comp2007TeamProject
 {
@@ -17,6 +21,15 @@ namespace comp2007TeamProject
         {
 
         }
+        /**
+    * <summary>
+    * This method searches the DB to see if the username and password match the ones in the DB and if they
+    * do create a new user object and sign them in
+    * </summary>
+    * @method LoginButton_Click()
+    * @return {void}
+    * 
+    * */
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
@@ -35,9 +48,13 @@ namespace comp2007TeamProject
 
                 //sign in
                 authenticationManager.SignIn(new AuthenticationProperties() {IsPersistent= false }, userIdentity);
-
+                string Id = user.Id;
+             
+               
                 //redirect to featured games
-                Response.Redirect("~/Calendar.aspx");
+               // Response.Redirect("~/Calendar.aspx");
+                Response.Redirect("~/Calendar.aspx?id=" + Id, true);
+
             }
             else
             {

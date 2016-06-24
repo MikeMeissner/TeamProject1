@@ -22,6 +22,14 @@ namespace comp2007TeamProject
             }
         }
 
+        /**
+         * <summary>
+         * This method connects to db and pulls out existing info for an existing game
+         * </summary>
+         * @method @getGameDetails
+         * @return {void}
+         */
+         
 
         protected void getGameDetails()
         {

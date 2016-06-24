@@ -8,6 +8,10 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+/**
+ * Authors: Nathan Siu and Mike Meissner
+ * File Description: Code behind file for the register page
+ * */
 
 namespace comp2007TeamProject
 {
@@ -24,7 +28,13 @@ namespace comp2007TeamProject
             Response.Redirect("~/Default.aspx");
 
         }
-
+        /**
+         * <summary>
+         * This method creates a new user object and logs them in to the site
+         * </summary>
+         * @method @RegisterButton_Click
+         * @return {void}
+         */
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
             //create new userStore and userManager Objects

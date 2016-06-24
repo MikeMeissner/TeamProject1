@@ -22,6 +22,13 @@ namespace comp2007TeamProject
                 this.getGameDetails();
             }
         }
+        /**
+         * <summary>
+         * This method connects to db and pulls out existing info for an existing game
+         * </summary>
+         * @method @getGameDetails
+         * @return {void}
+         */
         protected void getGameDetails()
         {
             // populate the form with existing data from the data base

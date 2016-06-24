@@ -44,7 +44,7 @@
                         <li id="login" runat="server"><a href="/Login.aspx">Login</a></li>
                         </asp:PlaceHolder>
                         <asp:PlaceHolder ID="LogoutPlaceHolder" runat="server">
-                             <li id="userProfile" runat="server" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="UserProfile.aspx?D={0}" ><a href="/UserProfile.aspx">User Profile</a></li>
+                             <li id="userProfile" runat="server"><a href="/UserProfile.aspx">User Profile</a></li>
 
                             <li id="logout" runat="server"><a href="/Logout.aspx">Logout</a></li>
                         </asp:PlaceHolder>

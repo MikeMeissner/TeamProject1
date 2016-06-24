@@ -24,7 +24,7 @@ namespace comp2007TeamProject
      
         protected void GetUser()
         {
-            string UserID = Request.QueryString["Id"].ToString();
+            string UserID = Request.QueryString.ToString();
 
             using (GameTrackerConnection db = new GameTrackerConnection())
             {

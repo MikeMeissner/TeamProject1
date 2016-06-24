@@ -8,6 +8,10 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+/**
+ * Authors: Nathan Siu and Mike Meissner
+ * File Description: Code behind file for logout page
+ * */
 
 namespace comp2007TeamProject
 {

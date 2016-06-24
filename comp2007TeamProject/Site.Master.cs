@@ -8,6 +8,10 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+/**
+ * Authors: Nathan Siu and Mike Meissner
+ * File Description: Code behind file for the master page
+ * */
 
 namespace comp2007TeamProject
 {
@@ -21,16 +25,25 @@ namespace comp2007TeamProject
                 //check if a user is logged in
                 if(HttpContext.Current.User.Identity.IsAuthenticated)
                 {
+                    //show all registered user content and hide the login and register
                     PublicPlaceHolder.Visible = false;
                     LogoutPlaceHolder.Visible = true;
                 }
                 else
                 {
-                    LogoutPlaceHolder.Visible = false;
+                    LogoutPlaceHolder.Visible = false;/// hide logout
                 }
             }
         }
 
+    /**
+     * <summary>
+     * This method adds a class of active to teh list items based on the current page
+     * </summary>
+     * @method setActivePage()
+     * @return {void}
+     * 
+     * */
         private void SetActivePage()
         {
             switch (Page.Title)

@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <body id="guestContent">
        <div class="container">
         <div class="row">
             <br />
@@ -59,4 +60,5 @@
             </div>
         </div>
     </div>
+        </body>
 </asp:Content>

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CsgoDetails.aspx.cs" Inherits="comp2007TeamProject.WebForm3" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <body id="guestContent">
     <div class="container">
         <div class="row">
             <br />
@@ -61,5 +62,6 @@
             </div>
         </div>
     </div>
+        </body>
 </asp:Content>
 
